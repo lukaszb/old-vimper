@@ -1,0 +1,158 @@
+" Include user's local 'before' vim config
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+syntax on
+set nu
+colorscheme ir_black
+
+"Default mapping
+nnoremap ' `
+nnoremap ` '
+let mapleader=','
+
+" numbering
+set ruler
+set number
+set numberwidth=6
+" Allow CTRL+L to switch line numbering
+nmap <C-L> :execute 'set nu!'<CR>
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
+
+" Whitespace stuff
+set wrap
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set list
+set listchars=tab:>·,trail:·,extends:#,nbsp:.
+autocmd filetype html,xml set listchars-=tab:>.
+
+set pastetoggle=<F2>
+
+" Searching
+set hlsearch
+set incsearch
+set noignorecase
+set smartcase
+
+" Tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,*.rbc,.git,.hg,.svn,.bzr,*.pyc
+
+"Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+" Status bar
+set laststatus=2
+
+" Bell
+set visualbell
+
+"Tabs and spaces
+set smartindent
+set tabstop=4
+
+"Status line"
+set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
+hi StatusLine ctermbg=7 ctermfg=0 gui=undercurl guisp=Yellow
+
+"Sets offset"
+set scrolloff=5
+
+" Vimdiff settings [for merges]
+nnoremap <Leader>u :diffupdate<CR>
+nnoremap <Leader>g :diffget<CR>
+nnoremap <Leader>p :diffput<CR>
+
+" Without setting this, ZoomWin restores windows in a way that causes
+" equalalways behavior to be triggered the next time CommandT is used.
+" This is likely a bludgeon to solve some other issue, but it works
+set noequalalways
+
+" Command-T settings
+let CommandTMaxHeight=20
+
+" NERDTree configuration
+:nmap <C-O> :execute 'NERDTreeToggle ' .getcwd() <CR>
+:nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
+:nmap <C-I> :execute 'NERDTreeMirror '<CR>
+
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*']
+let NERDTreeHighlightCursorline=1
+let NERDTreeWinSize=50
+
+" ZoomWin configuration
+map <Leader><Leader> :ZoomWin<CR>
+
+" CTags
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+"Toggle Tags List
+nmap <C-C> :execute 'TlistToggle' <CR>
+let Tlist_Use_Right_Window = 1
+let Tlist_Sort_Type = "name"
+let Tlist_WinWidth = 40
+
+" Bubble lines
+inoremap <C-Up> <Esc>:m-2<CR>==gi
+inoremap <C-Down> <Esc>:m+<CR>==gi
+nnoremap <C-Up> :m-2<CR>==
+nnoremap <C-Down> :m+<CR>==
+vnoremap <C-Up> :m-2<CR>gv=gv
+vnoremap <C-Down> :m'>+<CR>gv=gv
+
+" Use modeline overrides
+set modeline
+set modelines=10
+
+"autocmd FileType python compiler pylint
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html set filetype=htmldjango " For SnipMate
+autocmd FileType *.json set filetype=json
+autocmd BufEnter *.html set ft=htmldjango
+autocmd BufEnter *.html source ~/.vim/bundle/closetag/scripts/closetag.vim
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+
+" Error marker at ~80 character
+autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Include conf/django
+source ~/.vim/conf/python
+source ~/.vim/conf/django
+
+" Load platform specific settings
+if has('mac')
+    source ~/.vim/conf/osx
+endif
+if !has('mac') && has('unix')
+    source ~/.vim/conf/linux
+endif
+if has('win32')
+    source ~/.vim/conf/windows
+endif
+
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+

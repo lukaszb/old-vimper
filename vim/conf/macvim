@@ -1,0 +1,44 @@
+" MacVim specific settings
+if has("gui_macvim")
+    " Font menlo (works with OSX >= 10.6
+    set guifont=menlo:h12
+
+    " Tabs changer as in TextMate
+    map <D-1> :tabn 1<CR>
+    map <D-2> :tabn 2<CR>
+    map <D-3> :tabn 3<CR>
+    map <D-4> :tabn 4<CR>
+    map <D-5> :tabn 5<CR>
+    map <D-6> :tabn 6<CR>
+    map <D-7> :tabn 7<CR>
+    map <D-8> :tabn 8<CR>
+    map <D-9> :tabn 9<CR>
+
+    " Fullscreen takes up entire screen
+    set fuoptions=maxhorz,maxvert
+
+    " Command-T for CommandT
+    " Have to figure out how to make menu item working properly...
+    "an 40.600 Tools.-SEP4-					<nop>
+    "an 40.610 Tools.CommandT
+    "macmenu Tools.CommandT key=<D-r>
+    map <D-r> :CommandT<CR>
+    imap <D-r> <Esc>:CommandT<CR>
+
+    " Command-Shift-F for Full Screen Mode
+    "macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
+    macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-F>
+
+    " Command-e for ConqueTerm
+    map <D-e> :call StartTerm()<CR>
+
+    " Command-/ to toggle comments
+    map <D-/> <plug>NERDCommenterToggle<CR>
+
+    " Command-][ to increase/decrease indentation
+    vmap <D-]> >gv
+    vmap <D-[> <gv
+endif
+
+" vim: ft=vim
+

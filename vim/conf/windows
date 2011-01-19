@@ -1,0 +1,15 @@
+" Windows specific VIM settings
+
+" Tabs like in TextMate (but with ALT key)
+map <A-1> :tabn 1<CR>
+map <A-2> :tabn 2<CR>
+map <A-3> :tabn 3<CR>
+map <A-4> :tabn 4<CR>
+map <A-5> :tabn 5<CR>
+map <A-6> :tabn 6<CR>
+map <A-7> :tabn 7<CR>
+map <A-8> :tabn 8<CR>
+map <A-9> :tabn 9<CR>
+
+" vim: ft=vim
+

@@ -1,0 +1,9 @@
+.hg
+.svn
+*.pyc
+*.swp
+*.tar
+*.tar.gz
+*.zip
+
+bundle

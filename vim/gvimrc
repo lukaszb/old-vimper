@@ -1,0 +1,29 @@
+if filereadable(expand("~/.gvimrc.before"))
+    source ~/.gvimrc.before
+endif
+
+set guioptions-=m " Removes menubar
+set guioptions-=T " Removes Toolbar
+set guioptions+=c " Uses console dialogs (instead of popups)
+set winaltkeys=no
+
+" NERDTree Gui settings
+let NERDTreeWinSize = 50
+
+if exists('g:GUI_NERDTREE_DEFAULT_PATH') && isdirectory(expand(g:GUI_NERDTREE_DEFAULT_PATH))
+    :nmap <C-O> :execute 'NERDTreeToggle ' . g:GUI_NERDTREE_DEFAULT_PATH <CR>
+endif
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>gev :e $HOME/.gvimrc<CR>
+nmap <silent> <leader>gsv :so $HOME/.gvimrc<CR>
+
+if has("gui_macvim")
+    source ~/.vim/conf/macvim
+endif
+
+" Include user's local vim config
+if filereadable(expand("~/.gvimrc.local"))
+  source ~/.gvimrc.local
+endif
+
