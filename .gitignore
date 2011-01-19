@@ -6,4 +6,6 @@
 *.tar.gz
 *.zip
 
+backup/*
 bundle
+cache/*
