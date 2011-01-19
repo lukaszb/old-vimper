@@ -48,7 +48,7 @@ def redefine_links():
 VIM_PLUGINS = {
     'commandt': 'git://github.com/wincent/Command-T.git',
     'surround': 'git://github.com/tpope/vim-surround.git',
-    'nerdtree': 'git://github.com/wycats/nerdtree.git',
+    'nerdtree': 'git://github.com/scrooloose/nerdtree.git',
     'supertab': 'git://github.com/ervandew/supertab.git',
     'ir_black': 'git://github.com/lukaszb/vim-irblack.git',
 }
