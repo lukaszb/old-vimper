@@ -117,6 +117,12 @@ vnoremap <C-Down> :m'>+<CR>gv=gv
 set modeline
 set modelines=10
 
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+endif
+
+
 "autocmd FileType python compiler pylint
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -137,9 +143,10 @@ autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" Include conf/django
-autocmd FileType python map <buffer> <Leader>R :w<CR>:!/usr/bin/env python % <CR>
-autocmd FileType ruby map <buffer> <Leader>R :w<CR>:!/usr/bin/env ruby % <CR>
+" Simple Python/Ruby/Shell scripts running
+autocmd FileType python map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env python # <CR>
+autocmd FileType ruby map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env ruby # <CR>
+autocmd FileType sh map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env sh # <CR>
 
 source ~/.vim/conf/django
 
