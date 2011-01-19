@@ -34,9 +34,10 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set list
-set listchars=tab:>·,trail:·,extends:#,nbsp:.
+set nolist
+set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 autocmd filetype html,xml set listchars-=tab:>.
+nmap <F3> :execute 'set list!'<CR>
 
 set pastetoggle=<F2>
 

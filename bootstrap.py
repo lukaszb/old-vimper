@@ -50,6 +50,7 @@ VIM_PLUGINS = {
     'surround': 'git://github.com/tpope/vim-surround.git',
     'nerdtree': 'git://github.com/wycats/nerdtree.git',
     'supertab': 'git://github.com/ervandew/supertab.git',
+    'ir_black': 'git://github.com/lukaszb/vim-irblack.git',
 }
 
 # OSX Changes
@@ -80,7 +81,7 @@ def get_plugin(name, uri):
             logger.debug("Cloning %s => %s" % (uri, dst))
             run_cmd('git clone %s %s' % (uri, dst))
 
-def perform_caveats():
+def post_actions():
     # Command-T
     COMMANDT_DIR = abspath(BUNDLE_DIR, 'commandt')
     src_dir = abspath(COMMANDT_DIR, 'ruby', 'command-t')
@@ -96,7 +97,7 @@ def main():
     # Fetch plugins
     for name, uri in VIM_PLUGINS.iteritems():
         get_plugin(name, uri)
-    perform_caveats()
+    post_actions()
 
 if __name__ == '__main__':
     main()
