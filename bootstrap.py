@@ -46,9 +46,15 @@ def redefine_links():
 
 
 VIM_PLUGINS = {
-    'commandt': "git://github.com/wincent/Command-T.git",
+    'commandt': 'git://github.com/wincent/Command-T.git',
     'surround': 'git://github.com/tpope/vim-surround.git',
+    'nerdtree': 'git://github.com/wycats/nerdtree.git',
+    'supertab': 'git://github.com/ervandew/supertab.git',
 }
+
+# OSX Changes
+if sys.platform == 'darwin':
+    VIM_PLUGINS['nerdtree'] = 'git://github.com/lukaszb/nerdtree.git'
 
 def run_cmd(cmd, stdout=None, stderr=None, cwd=None, shell=None):
     if stdout is None:
