@@ -138,8 +138,8 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Include conf/django
-autocmd FileType python map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
-autocmd FileType ruby map <buffer> <S-e> :w<CR>:!/usr/bin/env ruby % <CR>
+autocmd FileType python map <buffer> <Leader>R :w<CR>:!/usr/bin/env python % <CR>
+autocmd FileType ruby map <buffer> <Leader>R :w<CR>:!/usr/bin/env ruby % <CR>
 
 source ~/.vim/conf/django
 
