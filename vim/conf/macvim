@@ -22,8 +22,8 @@ if has("gui_macvim")
     "an 40.600 Tools.-SEP4-					<nop>
     "an 40.610 Tools.CommandT
     "macmenu Tools.CommandT key=<D-r>
-    map <D-r> :CommandT<CR>
-    imap <D-r> <Esc>:CommandT<CR>
+    "map <D-r> :CommandT<CR>
+    "imap <D-r> <Esc>:CommandT<CR>
 
     " Command-Shift-F for Full Screen Mode
     "macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
