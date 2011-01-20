@@ -145,8 +145,11 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Simple Python/Ruby/Shell scripts running
 autocmd FileType python map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env python # <CR>
+autocmd FileType python map <buffer> <Leader>R :w<CR>:!/usr/bin/env python %<CR>
 autocmd FileType ruby map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env ruby # <CR>
+autocmd FileType ruby map <buffer> <Leader>R :w<CR>:!/usr/bin/env ruby % <CR>
 autocmd FileType sh map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env sh # <CR>
+autocmd FileType sh map <buffer> <Leader>R :w<CR>:!/usr/bin/env sh % <CR>
 
 source ~/.vim/conf/django
 
