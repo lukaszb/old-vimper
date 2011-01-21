@@ -58,6 +58,9 @@ set directory=~/.vim/backup
 " Status bar
 set laststatus=2
 
+" Cursor line
+set cursorline
+
 " Bell
 set visualbell
 
