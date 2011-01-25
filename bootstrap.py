@@ -97,6 +97,9 @@ def main():
     # Prepare
     setup_env()
     redefine_links()
+    backupdir = abspath(HOME_DIR, '.vim/', 'backup')
+    if not os.path.isdir(backupdir):
+        os.makedirs(backupdir)
     # Fetch plugins
     for name, uri in VIM_PLUGINS.iteritems():
         get_plugin(name, uri)
