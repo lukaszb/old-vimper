@@ -46,14 +46,15 @@ def redefine_links():
 
 
 VIM_PLUGINS = {
-    'commandt': 'git://github.com/wincent/Command-T.git',
-    'surround': 'git://github.com/tpope/vim-surround.git',
-    'nerdtree': 'git://github.com/scrooloose/nerdtree.git',
-    'nerdcommenter': 'git://github.com/scrooloose/nerdcommenter.git',
-    'supertab': 'git://github.com/ervandew/supertab.git',
-    'ir_black': 'git://github.com/lukaszb/vim-irblack.git',
-    'fugitive': 'git://github.com/tpope/vim-fugitive.git',
-    'git': 'git://github.com/tpope/vim-git.git',
+    'closetag':       'git://github.com/vim-scripts/closetag.vim.git',
+    'commandt':       'git://github.com/wincent/Command-T.git',
+    'fugitive':       'git://github.com/tpope/vim-fugitive.git',
+    'git':            'git://github.com/tpope/vim-git.git',
+    'ir_black':       'git://github.com/lukaszb/vim-irblack.git',
+    'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
+    'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
+    'supertab':       'git://github.com/ervandew/supertab.git',
+    'surround':       'git://github.com/tpope/vim-surround.git',
 }
 
 # OSX Changes
