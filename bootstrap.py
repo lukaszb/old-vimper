@@ -56,6 +56,7 @@ VIM_PLUGINS = {
     'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
     'supertab':       'git://github.com/ervandew/supertab.git',
     'surround':       'git://github.com/tpope/vim-surround.git',
+    'taglist':        'git://github.com/vim-scripts/taglist.vim.git',
 }
 
 # OSX Changes
