@@ -1,6 +1,6 @@
 " Linux specific VIM settings
 
-set guifont=Liberation\ Mono\ 13
+set guifont=Liberation\ Mono\ 9
 
 " Tabs like in TextMate (but with ALT key)
 map <A-1> :tabn 1<CR>
