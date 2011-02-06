@@ -141,6 +141,15 @@ autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 " Error marker at ~80 character
 autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
+"  move text and rehighlight -- vim tip_id=224
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv 
+nmap <D-]> >>
+vmap <D-]> >>
+imap <D-]> <C-O>>>
+nmap <D-[> <<
+vmap <D-[> <<
+imap <D-[> <C-O><<
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
