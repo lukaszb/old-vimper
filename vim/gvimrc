@@ -7,6 +7,9 @@ set guioptions-=T " Removes Toolbar
 set guioptions+=c " Uses console dialogs (instead of popups)
 set winaltkeys=no
 
+" Short labels at tabs
+set guitablabel=%!expand(\"\%:t\")
+
 " NERDTree Gui settings
 let NERDTreeWinSize = 50
 
