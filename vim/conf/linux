@@ -13,5 +13,7 @@ map <A-7> :tabn 7<CR>
 map <A-8> :tabn 8<CR>
 map <A-9> :tabn 9<CR>
 
+map <A-t> :tabnew<CR>
+
 " vim: ft=vim
 
