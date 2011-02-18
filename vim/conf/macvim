@@ -1,7 +1,7 @@
 " MacVim specific settings
 if has("gui_macvim")
     " Font menlo (works with OSX >= 10.6
-    set guifont=menlo:h12
+    set guifont=menlo\ bold:h12
 
     " Tabs changer as in TextMate
     map <D-1> :tabn 1<CR>
