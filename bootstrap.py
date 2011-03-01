@@ -54,6 +54,7 @@ VIM_PLUGINS = {
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
     'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
+    'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
     'supertab':       'git://github.com/ervandew/supertab.git',
