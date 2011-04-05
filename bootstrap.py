@@ -57,6 +57,7 @@ VIM_PLUGINS = {
     'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
+    'solarized':      'git://github.com/altercation/vim-colors-solarized.git',
     'supertab':       'git://github.com/ervandew/supertab.git',
     'surround':       'git://github.com/tpope/vim-surround.git',
     'taglist':        'git://github.com/vim-scripts/taglist.vim.git',
