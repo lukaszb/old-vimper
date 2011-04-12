@@ -90,7 +90,7 @@ let CommandTMaxHeight=20
 
 " NERDTree configuration
 :nmap <C-O> :execute 'NERDTreeToggle ' .getcwd() <CR>
-:nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
+":nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
 :nmap <C-I> :execute 'NERDTreeMirror '<CR>
 
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*']
@@ -180,4 +180,8 @@ endif
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" Gundo.vim
+let g:gundo_right = 1
+nnoremap <C-H> :GundoToggle<CR>
 

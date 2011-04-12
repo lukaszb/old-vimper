@@ -51,6 +51,7 @@ VIM_PLUGINS = {
     'commandt':       'git://github.com/wincent/Command-T.git',
     'fugitive':       'git://github.com/tpope/vim-fugitive.git',
     'git':            'git://github.com/tpope/vim-git.git',
+    'gundo':          'http://github.com/sjl/gundo.vim.git',
     'ir_black':       'git://github.com/lukaszb/vim-irblack.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
