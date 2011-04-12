@@ -47,6 +47,7 @@ def redefine_links():
 
 VIM_PLUGINS = {
     'closetag':       'git://github.com/vim-scripts/closetag.vim.git',
+    'color-sampler':  'git://github.com/vim-scripts/Color-Sampler-Pack.git',
     'commandt':       'git://github.com/wincent/Command-T.git',
     'fugitive':       'git://github.com/tpope/vim-fugitive.git',
     'git':            'git://github.com/tpope/vim-git.git',
