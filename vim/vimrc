@@ -135,7 +135,7 @@ autocmd BufEnter *.json set filetype=javascript
 autocmd BufEnter *.html set ft=htmldjango
 autocmd BufEnter *.html source ~/.vim/bundle/closetag/plugin/closetag.vim
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
 " Error marker at ~80 character
