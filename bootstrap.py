@@ -63,6 +63,7 @@ VIM_PLUGINS = {
     'supertab':       'git://github.com/ervandew/supertab.git',
     'surround':       'git://github.com/tpope/vim-surround.git',
     'taglist':        'git://github.com/vim-scripts/taglist.vim.git',
+    'yankring':       'git://github.com/vim-scripts/YankRing.vim.git',
     'zoomwin':        'git://github.com/vim-scripts/ZoomWin.git',
 }
 
