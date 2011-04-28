@@ -135,11 +135,14 @@ autocmd BufEnter *.json set filetype=javascript
 autocmd BufEnter *.html set ft=htmldjango
 autocmd BufEnter *.html source ~/.vim/bundle/closetag/plugin/closetag.vim
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd BufWritePre *.py :%s/\s\+$//e
+"autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
 " Error marker at ~80 character
 autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
+" Remove whitespaces ...
+nmap <silent> <leader>ww :%s/\s\+$//e<CR> :echo "Whitespace removed"<CR>
 
 "  move text and rehighlight -- vim tip_id=224
 vnoremap > ><CR>gv
