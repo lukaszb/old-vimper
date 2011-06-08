@@ -79,6 +79,9 @@ set scrolloff=5
 nnoremap <Leader>u :diffupdate<CR>
 nnoremap <Leader>g :diffget<CR>
 nnoremap <Leader>p :diffput<CR>
+nnoremap <Leader>GL :diffget LO <CR>
+nnoremap <Leader>GB :diffget BA <CR>
+nnoremap <Leader>GR :diffget RE <CR>
 
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
@@ -155,8 +158,8 @@ vmap <D-[> <<
 imap <D-[> <C-O><<
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>ee :e $MYVIMRC<CR>
+nmap <silent> <leader>er :so $MYVIMRC<CR>
 
 " Simple Python/Ruby/Shell scripts running
 autocmd FileType python map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env python # <CR>
@@ -187,4 +190,8 @@ endif
 " Gundo.vim
 let g:gundo_right = 1
 nnoremap <C-H> :GundoToggle<CR>
+
+" ack.vim
+nmap <silent> <unique> <Leader>aa :Ack 
+nmap <silent> <unique> <Leader>ag :Ack -g 
 
