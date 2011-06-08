@@ -46,6 +46,7 @@ def redefine_links():
 
 
 VIM_PLUGINS = {
+    'ack':            'git://github.com/vim-scripts/ack.vim.git',
     'closetag':       'git://github.com/vim-scripts/closetag.vim.git',
     'coffee-script':  'git://github.com/kchmck/vim-coffee-script.git',
     'color-sampler':  'git://github.com/vim-scripts/Color-Sampler-Pack.git',
@@ -54,10 +55,12 @@ VIM_PLUGINS = {
     'git':            'git://github.com/tpope/vim-git.git',
     'gundo':          'http://github.com/sjl/gundo.vim.git',
     'ir_black':       'git://github.com/lukaszb/vim-irblack.git',
+    'jslint':         'git://github.com/hallettj/jslint.vim.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
     'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
     'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
+    'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
     'solarized':      'git://github.com/altercation/vim-colors-solarized.git',
@@ -65,6 +68,7 @@ VIM_PLUGINS = {
     'surround':       'git://github.com/tpope/vim-surround.git',
     'taglist':        'git://github.com/vim-scripts/taglist.vim.git',
     'yankring':       'git://github.com/vim-scripts/YankRing.vim.git',
+    'web-indent':     'git://github.com/lukaszb/vim-web-indent.git',
     'zoomwin':        'git://github.com/vim-scripts/ZoomWin.git',
 }
 
