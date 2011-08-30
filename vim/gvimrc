@@ -2,6 +2,9 @@ if filereadable(expand("~/.gvimrc.before"))
     source ~/.gvimrc.before
 endif
 
+set background=light
+colorscheme solarized
+
 set guioptions-=m " Removes menubar
 set guioptions-=T " Removes Toolbar
 set guioptions+=c " Uses console dialogs (instead of popups)
