@@ -196,3 +196,6 @@ nnoremap <C-H> :GundoToggle<CR>
 nmap <silent> <unique> <Leader>aa :Ack 
 nmap <silent> <unique> <Leader>ag :Ack -g 
 
+" Let JSLint use node
+let $JS_CMD='node'
+
