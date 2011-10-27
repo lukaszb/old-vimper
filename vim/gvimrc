@@ -2,7 +2,7 @@ if filereadable(expand("~/.gvimrc.before"))
     source ~/.gvimrc.before
 endif
 
-set background=light
+set background=dark
 colorscheme solarized
 
 set guioptions-=m " Removes menubar

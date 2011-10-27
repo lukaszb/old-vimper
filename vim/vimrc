@@ -163,6 +163,8 @@ nmap <silent> <leader>ee :e $MYVIMRC<CR>
 nmap <silent> <leader>er :so $MYVIMRC<CR>
 
 " Simple Python/Ruby/Shell scripts running
+autocmd FileType coffee map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env coffee # <CR>
+autocmd FileType coffee map <buffer> <Leader>R :w<CR>:!/usr/bin/env coffee %<CR>
 autocmd FileType python map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env python # <CR>
 autocmd FileType python map <buffer> <Leader>R :w<CR>:!/usr/bin/env python %<CR>
 autocmd FileType ruby map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env ruby # <CR>
