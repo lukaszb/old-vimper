@@ -97,7 +97,7 @@ let CommandTMaxHeight=20
 ":nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
 :nmap <C-I> :execute 'NERDTreeMirror '<CR>
 
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*', '__pycache__']
 let NERDTreeHighlightCursorline=1
 let NERDTreeWinSize=50
 
