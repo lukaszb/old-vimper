@@ -89,8 +89,9 @@ nnoremap <Leader>GR :diffget RE <CR>
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" Command-T settings
+" Command-T settings and mapping
 let CommandTMaxHeight=20
+nmap <Leader>f :CommandTFlush <CR>
 
 " cope (Error list)
 nnoremap <Leader>E :cope <CR>
