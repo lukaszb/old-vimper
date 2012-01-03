@@ -199,8 +199,8 @@ let g:gundo_right = 1
 nnoremap <C-H> :GundoToggle<CR>
 
 " ack.vim
-nmap <silent> <unique> <Leader>aa :Ack 
-nmap <silent> <unique> <Leader>ag :Ack -g 
+nmap <silent> <Leader>aa :Ack
+nmap <silent> <Leader>ag :Ack -g
 
 " Let JSLint use node
 let $JS_CMD='node'

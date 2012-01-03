@@ -21,8 +21,8 @@ if exists('g:GUI_NERDTREE_DEFAULT_PATH') && isdirectory(expand(g:GUI_NERDTREE_DE
 endif
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>gev :e $HOME/.gvimrc<CR>
-nmap <silent> <leader>gsv :so $HOME/.gvimrc<CR>
+nmap <silent> <leader>ee :e $MYGVIMRC<CR>
+nmap <silent> <leader>er :so $MYGVIMRC<CR>
 
 if has("gui_macvim")
     source ~/.vim/conf/macvim
