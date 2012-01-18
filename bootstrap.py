@@ -47,6 +47,7 @@ def redefine_links():
 
 VIM_PLUGINS = {
     'ack':            'git://github.com/vim-scripts/ack.vim.git',
+    'clojure':        'git://github.com/vim-scripts/VimClojure.git',
     'closetag':       'git://github.com/vim-scripts/closetag.vim.git',
     'coffee-script':  'git://github.com/kchmck/vim-coffee-script.git',
     'color-sampler':  'git://github.com/vim-scripts/Color-Sampler-Pack.git',
