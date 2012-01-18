@@ -51,6 +51,7 @@ VIM_PLUGINS = {
     'coffee-script':  'git://github.com/kchmck/vim-coffee-script.git',
     'color-sampler':  'git://github.com/vim-scripts/Color-Sampler-Pack.git',
     'commandt':       'git://github.com/wincent/Command-T.git',
+    'easy-motion':    'git://github.com/vim-scripts/EasyMotion.git',
     'fugitive':       'git://github.com/tpope/vim-fugitive.git',
     'git':            'git://github.com/tpope/vim-git.git',
     'gundo':          'http://github.com/sjl/gundo.vim.git',
