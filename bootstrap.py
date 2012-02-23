@@ -55,6 +55,7 @@ VIM_PLUGINS = {
     'git':            'git://github.com/tpope/vim-git.git',
     'gundo':          'http://github.com/sjl/gundo.vim.git',
     'ir_black':       'git://github.com/lukaszb/vim-irblack.git',
+    'jinja':          'git://github.com/vim-scripts/Jinja.git',
     'jslint':         'git://github.com/hallettj/jslint.vim.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
