@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/lukasz/develop/workspace/vimper/vim/bundle/simple-pairs/plugin'
+let g:netrw_dirhist_2='/Users/lukasz/temp/fortune-mod-9708/datfiles'
+let g:netrw_dirhist_3='/Users/lukasz/develop/workspace/vimper/vim/bundle/foobar'
+let g:netrw_dirhist_4='/Users/lukasz/develop/workspace/mirror/dulwich/dulwich/tests'
+let g:netrw_dirhist_5='/Users/lukasz/develop/workspace/www/vcsweb/vcsweb'
+let g:netrw_dirhist_6='/Users/lukasz/develop/workspace/mirror/django-extensions/django_extensions'

@@ -6,6 +6,6 @@
 *.tar.gz
 *.zip
 
-backup/*
+vim/backup/*
 bundle
 cache/*
