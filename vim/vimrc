@@ -14,7 +14,12 @@ set background=dark
 "Default mapping
 nnoremap ' `
 nnoremap ` '
+nmap ; :
 let mapleader=','
+
+"More natural moving cursor between editor rows
+map j gj
+map k gk
 
 " numbering
 set ruler
@@ -134,6 +139,9 @@ if has("autocmd")
 endif
 
 
+"auto set proper filetypes
+autocmd BufRead,BufNewFile *.kv set ft=kivy
+
 "autocmd FileType python compiler pylint
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -176,6 +184,8 @@ autocmd FileType ruby map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env ruby
 autocmd FileType ruby map <buffer> <Leader>R :w<CR>:!/usr/bin/env ruby % <CR>
 autocmd FileType sh map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env sh # <CR>
 autocmd FileType sh map <buffer> <Leader>R :w<CR>:!/usr/bin/env sh % <CR>
+autocmd FileType javascript map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env node # <CR>
+autocmd FileType javascript map <buffer> <Leader>R :w<CR>:!/usr/bin/env node % <CR>
 
 source ~/.vim/conf/django
 
@@ -205,4 +215,7 @@ nmap <silent> <Leader>ag :Ack -g
 
 " Let JSLint use node
 let $JS_CMD='node'
+
+" python-mode
+let g:pymode_folding = 0
 
