@@ -75,10 +75,6 @@ VIM_PLUGINS = {
     'zoomwin':        'git://github.com/vim-scripts/ZoomWin.git',
 }
 
-# OSX Changes
-if sys.platform == 'darwin':
-    VIM_PLUGINS['nerdtree'] = 'git://github.com/lukaszb/nerdtree.git'
-
 def run_cmd(cmd, stdout=None, stderr=None, cwd=None, shell=None):
     if stdout is None:
         stdout = sys.stdout
