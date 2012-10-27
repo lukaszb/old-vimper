@@ -6,6 +6,7 @@
 *.tar.gz
 *.zip
 
+vim/.netrwhist
 vim/backup/*
 bundle
 cache/*
