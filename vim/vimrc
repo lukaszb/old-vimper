@@ -62,6 +62,11 @@ set wildignore+=*.o,*.obj,*.rbc,.git,.hg,.svn,.bzr,*.pyc
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" ... which we actually won't use
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Status bar
 set laststatus=2
 
