@@ -224,3 +224,6 @@ let $JS_CMD='node'
 " python-mode
 let g:pymode_folding = 0
 
+" General actions
+vnoremap <Leader>s :sort<CR>
+
