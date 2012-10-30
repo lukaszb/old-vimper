@@ -211,6 +211,8 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " Gundo.vim
+set history=500
+set undolevels=500
 let g:gundo_right = 1
 nnoremap <C-H> :GundoToggle<CR>
 
@@ -226,4 +228,8 @@ let g:pymode_folding = 0
 
 " General actions
 vnoremap <Leader>s :sort<CR>
+
+" easier formatting paragraphs
+vmap Q gq
+nmap Q gqap " standard qa Around Paragraph
 
