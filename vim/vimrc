@@ -6,6 +6,7 @@ endif
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Basic
 syntax on
 set nu
 colorscheme ir_black
@@ -161,9 +162,10 @@ set colorcolumn=81
 " Remove whitespaces ...
 nmap <silent> <leader>ww :%s/\s\+$//e<CR> :echo "Whitespace removed"<CR>
 
-"  move text and rehighlight -- vim tip_id=224
-vnoremap > ><CR>gv
-vnoremap < <<CR>gv 
+" Better indentation
+vnoremap < <gv
+vnoremap > >gv
+
 nmap <D-]> >>
 vmap <D-]> >>
 imap <D-]> <C-O>>>
@@ -174,6 +176,9 @@ imap <D-[> <C-O><<
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ee :e $MYVIMRC<CR>
 nmap <silent> <leader>er :so $MYVIMRC<CR>
+
+" Automatic reloading of .vimrc
+autocmd! bufwritepost $MYVIMRC source %
 
 " Simple Python/Ruby/Shell scripts running
 autocmd FileType coffee map <buffer> <Leader>rr :w<CR>:new<CR>:r!/usr/bin/env coffee # <CR>
