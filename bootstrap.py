@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-import os
-import sys
-import shutil
-import datetime
 from contrib import logger
 from subprocess import Popen, PIPE
+import datetime
+import os
+import shutil
+import sys
 
 abspath = lambda *p: os.path.abspath(os.path.join(*p))
 now = datetime.datetime.now()
@@ -65,6 +65,7 @@ VIM_PLUGINS = {
     'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
     'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
     'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
+    'powerline':      'https://github.com/Lokaltog/vim-powerline.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
     'solarized':      'git://github.com/altercation/vim-colors-solarized.git',
