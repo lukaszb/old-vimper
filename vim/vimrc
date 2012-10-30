@@ -238,3 +238,9 @@ vnoremap <Leader>s :sort<CR>
 vmap Q gq
 nmap Q gqap " standard qa Around Paragraph
 
+" easier moving around windows
+
+map <C-Down> <C-w>j
+map <C-Up> <C-w>k
+map <C-Left> <C-w>h
+map <C-Right> <C-w>l
