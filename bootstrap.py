@@ -67,6 +67,7 @@ VIM_PLUGINS = {
     'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
     'powerline':      'https://github.com/Lokaltog/vim-powerline.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
+    'python-mode':    'git://github.com/klen/python-mode.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
     'solarized':      'git://github.com/altercation/vim-colors-solarized.git',
     'supertab':       'git://github.com/ervandew/supertab.git',

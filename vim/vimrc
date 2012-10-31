@@ -244,3 +244,21 @@ map <C-Down> <C-w>j
 map <C-Up> <C-w>k
 map <C-Left> <C-w>h
 map <C-Right> <C-w>l
+
+" ==============================================================================
+" Python-Mode
+" ==============================================================================
+let g:pymode_rope_guess_project = 1
+
+let g:pymode_rope = 1
+let g:pymode_rope_auto_project = 1
+let g:pymode_rope_enable_autoimport = 1
+let g:pymode_rope_autoimport_generate = 1
+let g:pymode_rope_autoimport_modules = ["os","shutil","datetime"]
+let g:pymode_rope_vim_completion = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+
+let g:pymode_lint = 0
+
+map <C-g> :RopeGotoDefinition<CR>
+
