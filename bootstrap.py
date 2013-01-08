@@ -47,38 +47,38 @@ def redefine_links():
 
 VIM_PLUGINS = {
     'ack':            'git://github.com/vim-scripts/ack.vim.git',
-    'clojure':        'git://github.com/vim-scripts/VimClojure.git',
+    #'clojure':        'git://github.com/vim-scripts/VimClojure.git',
     'closetag':       'git://github.com/vim-scripts/closetag.vim.git',
-    'cocoa':          'git://github.com/vim-scripts/cocoa.vim.git',
+    #'cocoa':          'git://github.com/vim-scripts/cocoa.vim.git',
     'coffee-script':  'git://github.com/kchmck/vim-coffee-script.git',
     'color-sampler':  'git://github.com/vim-scripts/Color-Sampler-Pack.git',
     'commandt':       'git://github.com/wincent/Command-T.git',
-    'ctrlp':          'git://github.com/kien/ctrlp.vim.git',
-    'easy-motion':    'git://github.com/vim-scripts/EasyMotion.git',
+    #'ctrlp':          'git://github.com/kien/ctrlp.vim.git',
+    #'easy-motion':    'git://github.com/vim-scripts/EasyMotion.git',
     'fugitive':       'git://github.com/tpope/vim-fugitive.git',
     'git':            'git://github.com/tpope/vim-git.git',
-    'gundo':          'http://github.com/sjl/gundo.vim.git',
-    'hemisu':         'git://github.com/noahfrederick/Hemisu.git',
+    #'gundo':          'http://github.com/sjl/gundo.vim.git',
+    #'hemisu':         'git://github.com/noahfrederick/Hemisu.git',
     'ir_black':       'git://github.com/lukaszb/vim-irblack.git',
-    'jinja':          'git://github.com/vim-scripts/Jinja.git',
+    #'jinja':          'git://github.com/vim-scripts/Jinja.git',
     'jslint':         'git://github.com/hallettj/jslint.vim.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
-    'nerdtree':       'git://github.com/scrooloose/nerdtree.git',
-    'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
-    'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
+    'nerdtree':       'git://github.com/lukaszb/nerdtree.git',
+    #'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
+    #'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
     'powerline':      'https://github.com/Lokaltog/vim-powerline.git',
     'pyflakes':       'git://github.com/vim-scripts/pyflakes.vim.git',
-    'python-mode':    'git://github.com/klen/python-mode.git',
-    'selfdot':        'git://github.com/narfdotpl/selfdot.vim.git',
-    'singlecompile':  'git://github.com/xuhdev/SingleCompile.git',
+    #'python-mode':    'git://github.com/klen/python-mode.git',
+    #'selfdot':        'git://github.com/narfdotpl/selfdot.vim.git',
+    #'singlecompile':  'git://github.com/xuhdev/SingleCompile.git',
     'snipmate':       'git://github.com/lukaszb/snipmate.vim.git',
     'solarized':      'git://github.com/altercation/vim-colors-solarized.git',
     'superpy':        'git://github.com/lukaszb/superpy.git',
     'supertab':       'git://github.com/ervandew/supertab.git',
     'surround':       'git://github.com/tpope/vim-surround.git',
     'taglist':        'git://github.com/vim-scripts/taglist.vim.git',
-    'yankring':       'git://github.com/vim-scripts/YankRing.vim.git',
+    #'yankring':       'git://github.com/vim-scripts/YankRing.vim.git',
     'zoomwin':        'git://github.com/vim-scripts/ZoomWin.git',
 }
 
@@ -109,10 +109,11 @@ def get_plugin(name, uri):
 def post_actions():
     # Command-T
     COMMANDT_DIR = abspath(BUNDLE_DIR, 'commandt')
-    src_dir = abspath(COMMANDT_DIR, 'ruby', 'command-t')
-    cmd = '%s extconf.rb' % RUBY_BIN
-    run_cmd(cmd, cwd=src_dir, stdout=PIPE, stderr=PIPE)
-    run_cmd('make clean && make', cwd=src_dir)
+    if os.path.isdir(COMMANDT_DIR):
+        src_dir = abspath(COMMANDT_DIR, 'ruby', 'command-t')
+        cmd = '%s extconf.rb' % RUBY_BIN
+        run_cmd(cmd, cwd=src_dir, stdout=PIPE, stderr=PIPE)
+        run_cmd('make clean && make', cwd=src_dir)
 
 
 def main():

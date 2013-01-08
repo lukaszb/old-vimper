@@ -15,7 +15,7 @@ set background=dark
 "Default mapping
 nnoremap ' `
 nnoremap ` '
-nmap ; :
+"nmap ; :
 let mapleader=','
 
 "More natural moving cursor between editor rows
@@ -165,7 +165,7 @@ autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%
 set colorcolumn=81
 
 " Remove whitespaces ...
-nmap <silent> <leader>ww :%s/\s\+$//e<CR> :echo "Whitespace removed"<CR>
+"nmap <silent> <leader>ww :%s/\s\+$//e<CR> :echo "Whitespace removed"<CR>
 
 " Better indentation
 vnoremap < <gv
@@ -252,6 +252,7 @@ map <C-Right> <C-w>l
 let g:pymode_options = 0
 let g:pymode_syntax = 0
 let g:pymode_rope_guess_project = 1
+let g:pymode_utils_whitespaces = 1
 
 let g:pymode_rope = 1
 let g:pymode_rope_auto_project = 1
