@@ -164,6 +164,10 @@ autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 autocmd BufWinEnter *.py,*.txt,*.rst,*.c,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 set colorcolumn=81
 
+" Open files at position it was last opened
+"autocmd BufWinLeave * mkview
+"autocmd BufWinEnter * silent loadview
+
 " Remove whitespaces ...
 "nmap <silent> <leader>ww :%s/\s\+$//e<CR> :echo "Whitespace removed"<CR>
 
