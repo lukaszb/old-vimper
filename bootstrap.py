@@ -64,7 +64,7 @@ VIM_PLUGINS = {
     'jslint':         'git://github.com/hallettj/jslint.vim.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
-    'nerdtree':       'git://github.com/lukaszb/nerdtree.git',
+    'nerdtree':       'https://github.com/scrooloose/nerdtree.git',
     #'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
     #'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
     'powerline':      'https://github.com/Lokaltog/vim-powerline.git',
