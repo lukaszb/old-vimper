@@ -64,7 +64,10 @@ VIM_PLUGINS = {
     'jslint':         'git://github.com/hallettj/jslint.vim.git',
     'matchit':        'https://github.com/vim-scripts/matchit.zip.git',
     'nerdcommenter':  'git://github.com/scrooloose/nerdcommenter.git',
-    'nerdtree':       'https://github.com/scrooloose/nerdtree.git',
+    #'nerdtree':       'https://github.com/scrooloose/nerdtree.git',
+    # stick to old nerdtree, upstream is very slow when [C]hanging dir
+    'nerdtree':       'https://github.com/lukaszb/nerdtree.git',
+    'nerdtree-tabs':  'git://github.com/jistr/vim-nerdtree-tabs.git',
     #'nginx':          'git://github.com/vim-scripts/nginx.vim.git',
     #'nmap-syntax':    'git://github.com/vim-scripts/Nmap-syntax-highlight.git',
     'powerline':      'https://github.com/Lokaltog/vim-powerline.git',

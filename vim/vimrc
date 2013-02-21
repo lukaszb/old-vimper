@@ -108,10 +108,8 @@ nmap <Leader>f :CommandTFlush <CR>
 nnoremap <Leader>E :cope <CR>
 
 " NERDTree configuration
-:nmap <C-O> :execute 'NERDTreeToggle ' .getcwd() <CR>
-":nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
-:nmap <C-I> :execute 'NERDTreeMirror '<CR>
-
+":nmap <C-N> :execute 'NERDTreeTabsToggle ' .getcwd() <CR>
+:nmap <C-N> :execute 'NERDTreeTabsToggle ' <CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*', '__pycache__']
 let NERDTreeHighlightCursorline=1
 let NERDTreeWinSize=50
